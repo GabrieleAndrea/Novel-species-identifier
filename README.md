@@ -62,8 +62,11 @@ assembly phase and classification at genus level of each contig are mandatory.
 At line 77 to 79 the user must enter the path of each databases.
 
 Usage option:
+
 -ic, --idcontigs	maximum identity for contigs selection"
+
 -ig, --idgenes		maximum identity for genes selection"
+
 -g, --genus		selected genus"
 
 example: "./novel_species_identifier.sh -ic 94 -ig 90 -g Bifidobacterium"
