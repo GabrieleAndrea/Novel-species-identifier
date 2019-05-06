@@ -18,41 +18,41 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-1. What could Novel species identifier do?:
+	1. What could Novel species identifier do?:
 
 The script identifies those putative contigs that belongs to novel species of a
 selected genus starting from a shotgun metagenomic sample analyzed through the
 METAnnotatorX pipeline.
 
-2. System requirements:
+	2. System requirements:
 
 Novel species identifier should run on all Unix platforms, although it has not 
 tested in all platforms.
 
-3. Installation:
+	3. Installation:
 
 The script does not need any installation. To be executed, the script needs a 
 functional copy of METAnnotatorX pipeline.
 
-4. Software requirements and dependencies:
+	4. Software requirements and dependencies:
 
 Blastn programs (specifically blastn and makeblastdb programs)
 
-5. Databases:
+	5. Databases:
 
 The user has to build three custom databases based on the interested bacterial genus
 sequences.
 
-	A. Collection of all protein sequences:
+		A. Collection of all protein sequences:
 bin/./prerapsearch –f T –d /folder/sequences.fasta –n /folder/protein
 
-	B. Collection of all nucleotide sequences:
+		B. Collection of all nucleotide sequences:
 makeblastdb -in /folder/sequences.fasta -dbtype nucl -out /folder/nuc_genomes
 
-	C. Collection of all nucleotide genes' sequences:
+		C. Collection of all nucleotide genes' sequences:
 makeblastdb -in /folder/sequences.fasta -dbtype nucl -out /folder/nuc_genes
 
-6. Usage:
+	6. Usage:
 
 Place the script novel_species_identifier.sh in the same folder of the METAnnotatorX
 pipeline, e.g., alongside with folder "output", "parameters_folder", "software" and
@@ -71,6 +71,6 @@ Usage option:
 
 example: "./novel_species_identifier.sh -ic 94 -ig 90 -g Bifidobacterium"
 
-7. Results:
+	7. Results:
 
 In the folder novel_genus are located the results of each analysis step.
